@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="keyline_1">16dp</dimen>
+    <dimen name="keyline_2">72dp</dimen>
+    <dimen name="keyline_3">16dp</dimen>
+
+    <!-- List -->
+    <dimen name="margin_top_list">8dp</dimen>
+    <dimen name="margin_bottom_list">8dp</dimen>
+    <dimen name="height_small_list">48dp</dimen>
+</resources>
