@@ -43,6 +43,7 @@ public class FeedFragment extends Fragment implements FeedView {
         LinearLayoutManager lm = new LinearLayoutManager(getActivity());
         lm.setOrientation(LinearLayoutManager.VERTICAL);
         feedList.setLayoutManager(lm);
+        feedList.setAdapter(mAdapter);
     }
 
     @SuppressWarnings("unchecked")

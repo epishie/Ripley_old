@@ -23,6 +23,6 @@ public class GetFeedUseCase extends UseCase<Feed> {
 
     @Override
     protected Observable<Feed> createObservable() {
-        return mFeedRepository.getFeed();
+        return mFeedRepository.getStream();
     }
 }

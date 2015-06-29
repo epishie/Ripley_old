@@ -59,7 +59,7 @@ public class SimpleFeedProviderTest {
 
             String responseString = "";
             if (uri.getPath().equalsIgnoreCase("/.json")) {
-                InputStream is = new FileInputStream("app/src/test/assets/all.json");
+                InputStream is = new FileInputStream("src/test/assets/all.json");
                 byte[] raw = new byte[is.available()];
                 int read = is.read(raw);
                 if (read > 0) {

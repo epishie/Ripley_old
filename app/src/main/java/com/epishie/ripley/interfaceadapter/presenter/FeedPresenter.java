@@ -38,6 +38,10 @@ public class FeedPresenter {
             public void onNext(Feed feed) {
                 mView.showFeed(feed);
             }
+
+            @Override
+            public void onStart() {
+            }
         });
     }
 }

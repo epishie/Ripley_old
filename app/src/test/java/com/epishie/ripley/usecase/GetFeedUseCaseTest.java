@@ -2,14 +2,12 @@ package com.epishie.ripley.usecase;
 
 import com.epishie.ripley.entity.model.Feed;
 import com.epishie.ripley.entity.repository.FeedRepository;
-import com.epishie.ripley.mock.MockExecutor;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
@@ -31,7 +29,7 @@ public class GetFeedUseCaseTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        when(mFeedRepository.getFeed()).thenReturn(Observable.just(mFeed));
+        when(mFeedRepository.getStream()).thenReturn(Observable.just(mFeed));
     }
 
     @Test
@@ -53,8 +51,8 @@ public class GetFeedUseCaseTest {
                 assertEquals(feed, mFeed);
             }
         });
-        mScheduler.advanceTimeBy(2, TimeUnit.SECONDS);
+        mScheduler.advanceTimeBy(500, TimeUnit.MILLISECONDS);
 
-        verify(mFeedRepository).getFeed();
+        verify(mFeedRepository).getStream();
     }
 }

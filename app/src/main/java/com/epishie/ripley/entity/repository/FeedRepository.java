@@ -6,5 +6,7 @@ import rx.Observable;
 
 public interface FeedRepository {
 
-    Observable<Feed> getFeed();
+    Observable<Feed> getStream();
+    void refresh();
+    void fetchNext();
 }
